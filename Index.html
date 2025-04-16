@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+</head>
+<body>
+
+  <h1>Contador de Clicks</h1>
+  <div id="contador">0</div>
+  <button id="botonContar">Haz Click</button>
+  <button id="botonReset">Reiniciar</button>
+
+  <script>
+    // Obtener referencias a los elementos del DOM
+    const contador = document.getElementById('contador');
+    const botonContar = document.getElementById('botonContar');
+    const botonReset = document.getElementById('botonReset');
+
+    // Variable para contar los clics
+    let cuenta = 0;
+
+    // Evento para incrementar el contador
+    botonContar.addEventListener('click', () => {
+      cuenta++;
+      contador.textContent = cuenta;
+    });
+
+    // Evento para reiniciar el contador
+    botonReset.addEventListener('click', () => {
+      cuenta = 0;
+      contador.textContent = cuenta;
+    });
+  </script>
+
+</body>
+</html>
